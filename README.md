@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](.four-cards.png)
+![](./four-cards.png)
 
 ### Links
 
