@@ -1,0 +1,138 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-col: rgb(69, 68, 68);
+    --para: gray;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-size: 1rem;
+    /* font-size: calc(15px / 16px); */
+}
+
+main {
+    padding: 3rem 2rem 1rem 2rem; /* No change needed here */
+    font-family: 'Poppins';
+    min-width: 23.4375rem; /* 375px converted to rem */
+}
+
+.textcontainer {
+    text-align: center;
+}
+
+.textcontainer .dominant {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem; /* 22px converted to rem */
+}
+
+.textcontainer .dominant .ditem1 {
+    font-weight: 200;
+}
+
+.textcontainer .dominant .ditem2 {
+    font-weight: 600;
+    color: var(--header-col);
+}
+
+.textcontainer .smaller-text {
+    padding: 0 4rem;
+}
+
+
+.textcontainer .smaller-text, .gridcontainer .gitem :nth-child(2) {
+    color: var(--para);
+}
+
+.gridcontainer {
+    margin: 3rem 2rem;
+}
+
+.gridcontainer .gitem :nth-child(1) {
+    font-size: 1.5rem; 
+    font-weight: 600;
+    color: var(--header-col);
+}
+
+.gridcontainer .gitem {
+    display: grid;
+    background-color: white;
+    border-radius: 0.6rem; 
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.gridcontainer .gitem img {
+    justify-self: flex-end;
+}
+
+.gridcontainer .supervisor {
+    box-shadow: 
+    0rem 0.25rem 0.5rem #ccc, 
+    0rem -0.25rem hsl(180, 62%, 55%); 
+}
+
+.gridcontainer .team-builder {
+    box-shadow: 
+    0rem 0.25rem 0.5rem #ccc, 
+    0rem -0.25rem hsl(0, 78%, 62%);
+}
+
+.gridcontainer .karma {
+    box-shadow: 
+    0rem 0.25rem 0.5rem #ccc, 
+    0rem -0.25rem hsl(34, 97%, 64%);
+}
+
+.gridcontainer .calculator {
+    box-shadow: 
+    0rem 0.25rem 0.5rem #ccc, 
+    0rem -0.25rem hsl(212, 86%, 64%);
+}
+
+.attribution { 
+    font-size: 1.5rem; 
+    text-align: center; 
+
+}
+
+.attribution a { 
+    color: hsl(35, 64%, 51%); 
+}
+
+@media only screen and (min-width: 52rem) { /* 1440px converted to rem */
+    .gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 7rem);
+        gap: 2rem;
+    }
+
+    .gridcontainer .gitem {
+        margin: 0;
+    }
+    
+    .supervisor {
+        grid-column: 1 ;
+        grid-row: 2 / span 2;
+    }
+
+    .team-builder {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+
+    .karma {
+        grid-column: 2;
+        grid-row: 3 / span 2;
+    }
+
+    .calculator {
+        grid-column: 3;
+        grid-row: 2 / span 2;
+    }
+}
